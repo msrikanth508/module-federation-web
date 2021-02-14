@@ -1,0 +1,17 @@
+{
+  "name": "olxeu-buyer-web",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "concurrently \"wsrun --parallel start\"",
+    "wipe": "rm -fr node_modules packages/**/node_modules",
+    "build": "yarn workspaces run build"
+  },
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "wsrun": "^5.2.1"
+  }
+}
